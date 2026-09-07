@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
 
 LABEL version="1.0" \
       description="this is Dockerfile" \
-      maincontainer="Red Hat Training <training@redhat.com>"
+      maintainer="Red Hat Training <training@redhat.com>"
 
 USER root
 
