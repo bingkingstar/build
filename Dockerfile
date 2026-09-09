@@ -6,7 +6,7 @@ LABEL version="1.0" \
 
 USER root
 
-RUN microdnf insta ll -y python3 && \
+RUN microdnf install -y python3 && \
     microdnf clean all && \
     mkdir -p /app  && \
     echo "Hello container!" > /app/index.html
