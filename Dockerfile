@@ -8,11 +8,12 @@ USER root
 
 RUN microdnf install -y python3 && \
     microdnf clean all && \
-    mkdir -p /app
-RUN echo "Hello container!" > /app/index.html
+    mkdir -p /app && \
+    echo "Hello container!" > /app/index.html
 
 ENV DOCROOT=/app
 
+ONBUILD COPY src/ ${DOCROOT}
 EXPOSE 8080
 
 USER 1001
