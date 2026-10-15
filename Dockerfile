@@ -7,13 +7,13 @@ LABEL version="1.0" \
 USER root
 
 RUN microdnf install -y python3 && \
-    microdnf clean all && \
-    mkdir -p /app && \
+    microdnf clean all  && \
+    mkdir -p /app  && \
     echo "Hello container!" > /app/index.html
 
 ENV DOCROOT=/app
 
-ONBUILD COPY src/ $(DOCROOT)
+ONBUILD COPY src/ ${DOCROOT}    
 
 EXPOSE 8080
 
