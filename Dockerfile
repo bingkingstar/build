@@ -13,7 +13,7 @@ RUN microdnf install -y python3 && \
 
 ENV DOCROOT=/app
 
-ONBUILDCOPY src/ ${DOCROOT}
+ONBUILD COPY src/ ${DOCROOT}
 
 EXPOSE 8080
 
